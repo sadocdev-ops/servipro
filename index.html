@@ -116,10 +116,10 @@
       color: var(--primary);
     }
 
-    /* Hero Section */
+    /* Hero Section - Sin los botones centrales */
     .hero {
-      padding: 140px 20px 80px;
-      background: linear-gradient(135deg, rgba(26, 30, 36, 0.9), rgba(142, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80');
+      padding: 150px 20px 90px;
+      background: linear-gradient(135deg, rgba(26, 30, 36, 0.92), rgba(142, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80');
       background-size: cover;
       background-position: center;
       text-align: center;
@@ -153,53 +153,11 @@
     .hero p {
       font-size: 1.2rem;
       color: var(--text-muted);
-      margin-bottom: 30px;
-    }
-
-    .hero-btns {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      border: none;
-      font-size: 1rem;
-    }
-
-    .btn-primary {
-      background-color: var(--primary);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      background-color: var(--whatsapp-green);
-      color: white;
-    }
-
-    .btn-whatsapp:hover {
-      background-color: #1eb954;
-      transform: translateY(-2px);
     }
 
     /* Features Section */
     .features {
-      padding: 60px 20px;
+      padding: 50px 20px;
       background-color: var(--accent-gray);
     }
 
@@ -222,8 +180,8 @@
       margin-bottom: 15px;
     }
 
-    /* Services Section */
-    .services {
+    /* Sección: Lo que hacemos y ofrecemos */
+    .what-we-do {
       padding: 80px 20px;
       max-width: 1200px;
       margin: 0 auto;
@@ -253,53 +211,57 @@
       background-color: var(--primary);
     }
 
-    .services-grid {
+    .offer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
     }
 
-    .service-card {
+    .offer-card {
       background-color: var(--dark-card);
       border-radius: 12px;
       padding: 30px;
-      border-top: 4px solid var(--primary);
+      border-left: 5px solid var(--primary);
       box-shadow: 0 5px 20px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
 
-    .service-card:hover {
+    .offer-card:hover {
       transform: translateY(-5px);
     }
 
-    .service-card i {
-      font-size: 45px;
-      color: var(--primary);
+    .offer-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
       margin-bottom: 20px;
     }
 
-    .service-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
+    .offer-header i {
+      font-size: 36px;
+      color: var(--primary);
     }
 
-    .service-card ul {
+    .offer-header h3 {
+      font-size: 1.4rem;
+    }
+
+    .offer-list {
       list-style: none;
     }
 
-    .service-card ul li {
-      padding: 8px 0;
+    .offer-list li {
+      padding: 10px 0;
       color: var(--text-muted);
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: flex-start;
+      gap: 12px;
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
-    .service-card ul li i {
-      font-size: 14px;
+    .offer-list li i {
       color: var(--primary);
-      margin: 0;
+      margin-top: 5px;
     }
 
     /* Contact Section */
@@ -372,6 +334,27 @@
       font-size: 1rem;
     }
 
+    .btn-submit {
+      width: 100%;
+      background-color: var(--whatsapp-green);
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-submit:hover {
+      background-color: #1eb954;
+    }
+
     /* Footer */
     footer {
       background-color: var(--secondary);
@@ -389,7 +372,7 @@
 </head>
 <body>
 
-  <!-- Sticky Buttons -->
+  <!-- Sticky Contact Buttons (WhatsApp & Gmail) -->
   <div class="sticky-contact">
     <a href="https://wa.me/56968610702?text=Hola%20SERVIPRO,%20me%20gustaría%20solicitar%20una%20cotización." class="sticky-btn btn-ws" target="_blank" title="Contactar por WhatsApp">
       <i class="fab fa-whatsapp"></i>
@@ -407,7 +390,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#oferta">Lo que Hacemos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
@@ -419,81 +402,78 @@
       <span class="badge">Calidad, Seguridad y Confianza</span>
       <h1>Soluciones Integrales en Construcción, Mantención y Aseo</h1>
       <p>Servicios profesionales para empresas, colegios, oficinas y particulares. Atención garantizada en toda la región.</p>
-      <div class="hero-btns">
-        <a href="https://wa.me/56968610702?text=Hola%20SERVIPRO,%20quiero%20cotizar%20un%20servicio." class="btn btn-whatsapp" target="_blank">
-          <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
-        </a>
-        <a href="mailto:Adm.servipro@gmail.com?subject=Consulta%20SERVIPRO" class="btn btn-primary">
-          <i class="fas fa-envelope"></i> Enviar Correo
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- Features Banner -->
+  <!-- Feature Banner -->
   <section class="features">
     <div class="features-grid">
       <div class="feature-item">
         <i class="fas fa-hard-hat"></i>
         <h3>Personal Calificado</h3>
-        <p>Equipo con experiencia y herramientas para cada proyecto.</p>
+        <p>Equipo experimentado con herramientas de alto nivel.</p>
       </div>
       <div class="feature-item">
         <i class="fas fa-key"></i>
-        <h3>Llave en Mano</h3>
-        <p>Nos encargamos de todo el proceso desde cero.</p>
+        <h3>Proyectos Llave en Mano</h3>
+        <p>Desde los cimientos hasta la entrega final operativa.</p>
       </div>
       <div class="feature-item">
         <i class="fas fa-map-marker-alt"></i>
         <h3>Atención Regional</h3>
-        <p>Cobertura completa para tus proyectos y mantenimientos.</p>
+        <p>Cobertura integral en toda la zona.</p>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services" id="servicios">
+  <!-- Sección: Lo que hacemos y ofrecemos -->
+  <section class="what-we-do" id="oferta">
     <div class="section-title">
-      <h2>Nuestros Servicios</h2>
+      <h2>Lo que Hacemos y Ofrecemos</h2>
     </div>
 
-    <div class="services-grid">
-      <!-- Servicio 1: Construcción -->
-      <div class="service-card">
-        <i class="fas fa-building"></i>
-        <h3>Obras & Construcción</h3>
-        <ul>
-          <li><i class="fas fa-check"></i> Extensión y ampliación de casas</li>
-          <li><i class="fas fa-check"></i> Trabajos en cemento y radieres</li>
-          <li><i class="fas fa-check"></i> Construcción y reparación de techos</li>
-          <li><i class="fas fa-check"></i> Proyectos completos Llave en Mano</li>
-          <li><i class="fas fa-check"></i> Reparación de muros y enchapes</li>
+    <div class="offer-grid">
+      <!-- Tarjeta 1: Construcción u Obras -->
+      <div class="offer-card">
+        <div class="offer-header">
+          <i class="fas fa-hammer"></i>
+          <h3>Construcción y Ampliaciones</h3>
+        </div>
+        <ul class="offer-list">
+          <li><i class="fas fa-check-circle"></i> Extensión y ampliación completa de casas.</li>
+          <li><i class="fas fa-check-circle"></i> Construcción de casas desde cero.</li>
+          <li><i class="fas fa-check-circle"></i> Radieres y trabajos en cemento.</li>
+          <li><i class="fas fa-check-circle"></i> Construcción, reparación y cambio de techos.</li>
+          <li><i class="fas fa-check-circle"></i> Reparación de muros y enchapes.</li>
         </ul>
       </div>
 
-      <!-- Servicio 2: Mantención & Seguridad -->
-      <div class="service-card">
-        <i class="fas fa-shield-alt"></i>
-        <h3>Seguridad & Mantención</h3>
-        <ul>
-          <li><i class="fas fa-check"></i> Instalación de cercos eléctricos (desde el cemento a la entrega)</li>
-          <li><i class="fas fa-check"></i> Cercos de fierro y estructuras metálicas</li>
-          <li><i class="fas fa-check"></i> Instalaciones eléctricas profesionales</li>
-          <li><i class="fas fa-check"></i> Fontanería y gasfitería general</li>
-          <li><i class="fas fa-check"></i> Pintura de interiores y exteriores</li>
+      <!-- Tarjeta 2: Mantenimiento e Instalaciones -->
+      <div class="offer-card">
+        <div class="offer-header">
+          <i class="fas fa-bolt"></i>
+          <h3>Electricidad y Seguridad</h3>
+        </div>
+        <ul class="offer-list">
+          <li><i class="fas fa-check-circle"></i> Instalación de cercos eléctricos (desde el cemento a la entrega llave en mano).</li>
+          <li><i class="fas fa-check-circle"></i> Fabricación e instalación de cercos de fierro.</li>
+          <li><i class="fas fa-check-circle"></i> Instalaciones eléctricas y mantenciones generales.</li>
+          <li><i class="fas fa-check-circle"></i> Mantenimiento preventivo y correctivo de casas.</li>
+          <li><i class="fas fa-check-circle"></i> Pintura de interiores y exteriores.</li>
         </ul>
       </div>
 
-      <!-- Servicio 3: Aseo Industrial -->
-      <div class="service-card">
-        <i class="fas fa-broom"></i>
-        <h3>Aseo Industrial & Áreas Verdes</h3>
-        <ul>
-          <li><i class="fas fa-check"></i> Team capacitado de personal de aseo</li>
-          <li><i class="fas fa-check"></i> Aseo industrial para empresas y colegios</li>
-          <li><i class="fas fa-check"></i> Limpieza profunda de oficinas</li>
-          <li><i class="fas fa-check"></i> Mantención de parcelas y corte de pasto</li>
-          <li><i class="fas fa-check"></i> Limpieza y mantención de casas</li>
+      <!-- Tarjeta 3: Aseo Industrial y Terrenos -->
+      <div class="offer-card">
+        <div class="offer-header">
+          <i class="fas fa-broom"></i>
+          <h3>Aseo Industrial y Jardinería</h3>
+        </div>
+        <ul class="offer-list">
+          <li><i class="fas fa-check-circle"></i> Contamos con equipo y team especializado de personal de aseo.</li>
+          <li><i class="fas fa-check-circle"></i> Aseo industrial profundo en colegios, empresas y oficinas.</li>
+          <li><i class="fas fa-check-circle"></i> Cortes de pasto y despeje de áreas verdes.</li>
+          <li><i class="fas fa-check-circle"></i> Limpieza técnica y mantención industrial.</li>
         </ul>
       </div>
     </div>
@@ -507,13 +487,13 @@
 
     <div class="contact-container">
       <div class="contact-info">
-        <h3>¿Tienes una consulta o necesitas cotizar?</h3>
-        <p style="margin-bottom: 30px; color: var(--text-muted);">Comunícate con nosotros directamente a través de cualquiera de nuestros canales oficiales:</p>
+        <h3>¿Tienes un proyecto o necesitas una cotización?</h3>
+        <p style="margin-bottom: 30px; color: var(--text-muted);">Comunícate directamente a nuestros canales oficiales:</p>
 
         <div class="contact-item">
           <i class="fab fa-whatsapp"></i>
           <div>
-            <h4>WhatsApp</h4>
+            <h4>WhatsApp Directo</h4>
             <a href="https://wa.me/56968610702" target="_blank">+56 9 6861 0702</a>
           </div>
         </div>
@@ -543,15 +523,15 @@
             <input type="text" id="nombre" placeholder="Tu nombre" required>
           </div>
           <div class="form-group">
-            <label for="servicio">Servicio de Interés</label>
-            <input type="text" id="servicio" placeholder="Ej: Cercos eléctricos, Aseo, Radier" required>
+            <label for="servicio">Servicio Requerido</label>
+            <input type="text" id="servicio" placeholder="Ej: Cercos eléctricos, Ampliación, Aseo" required>
           </div>
           <div class="form-group">
-            <label for="mensaje">Detalle de la solicitud</label>
+            <label for="mensaje">Detalle del Trabajo</label>
             <textarea id="mensaje" rows="4" placeholder="Escribe aquí los detalles..." required></textarea>
           </div>
-          <button type="button" class="btn btn-whatsapp" style="width: 100%; justify-content: center;" onclick="sendWhatsApp()">
-            <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+          <button type="button" class="btn-submit" onclick="sendWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Enviar Cotización por WhatsApp
           </button>
         </form>
       </div>
@@ -574,10 +554,17 @@
         return;
       }
 
-      const text = `Hola SERVIPRO, mi nombre es ${nombre}. Me interesa el servicio de ${servicio}. Detalle: ${mensaje}`;
+      const text = `Hola SERVIPRO, mi nombre es ${nombre}. Me interesa cotizar: ${servicio}. Detalle: ${mensaje}`;
       const encodedText = encodeURIComponent(text);
       window.open(`https://wa.me/56968610702?text=${encodedText}`, '_blank');
     }
   </script>
 </body>
 </html>
+
+ 
+
+   
+ 
+
+
